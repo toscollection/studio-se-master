@@ -63,7 +63,8 @@
 		<dependency>
 			<groupId>org.talend.dataquality</groupId>
 			<artifactId>dataquality-record-linkage</artifactId>
-			<version>${dataquality.lib.version}</version>
+			<!-- TPS-3713 Only upgrade this jar to a new version -->
+			<version>6.1.7</version>
 		</dependency>
 		<dependency>
 			<groupId>org.talend.dataquality</groupId>
