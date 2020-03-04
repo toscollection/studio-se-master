@@ -7,7 +7,7 @@
     <packaging>pom</packaging>
     <properties>
         <talend.nexus.host>https://artifacts-oss.talend.com</talend.nexus.host>
-        <components.version>0.28.2</components.version>
+        <components.version>0.29.0-SNAPSHOT</components.version>
         <dataquality.lib.version>8.0.1-SNAPSHOT</dataquality.lib.version>
         <fasterxml.jackson.version>2.10.1</fasterxml.jackson.version>
         <!-- jackson dataformat and jaxb should use version 2.9.10 to make studio compatible with bonita -->
