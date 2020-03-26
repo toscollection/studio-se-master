@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
     <groupId>org.talend.repo</groupId>
     <artifactId>dependencies.p2</artifactId>
-    <version>7.3.1</version>
+    <version>7.3.1-PATCH</version>
     <packaging>pom</packaging>
     <properties>
         <talend.nexus.host>https://artifacts-oss.talend.com</talend.nexus.host>
-        <components.version>0.28.2</components.version>
+        <components.version>0.28.3</components.version>
         <dataquality.lib.version>8.0.0</dataquality.lib.version>
         <fasterxml.jackson.version>2.10.1</fasterxml.jackson.version>
         <!-- jackson dataformat and jaxb should use version 2.9.10 to make studio compatible with bonita -->
