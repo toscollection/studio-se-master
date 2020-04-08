@@ -33,11 +33,34 @@
             <url>${talend.nexus.host}/nexus/content/repositories/TalendOpenSourceSnapshot/</url>
         </repository>
     </repositories>
-
+    <pluginRepositories>
+        <pluginRepository>
+            <id>releases</id>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <url>${talend.nexus.host}/nexus/content/repositories/TalendOpenSourceRelease/</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>snapshots</id>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <url>${talend.nexus.host}/nexus/content/repositories/TalendOpenSourceSnapshot/</url>
+        </pluginRepository>
+    </pluginRepositories>
     <properties>
         <talend.nexus.host>https://artifacts-oss.talend.com</talend.nexus.host>
         <product.final.name>${storage.prefix}-${product.timestamp}-V${product.version}${revision.filename}</product.final.name>
         <studio.dir>${project.build.directory}/products/${project.artifactId}/${osgi.os}/${osgi.ws}/${osgi.arch}</studio.dir>
+        <bom.out.dir>${project.build.directory}/products/${project.artifactId}-bom</bom.out.dir>
+        <bom.final.name>${storage.prefix}-${product.timestamp}-V${product.version}-${revision.filename}-bom.xlsx</bom.final.name>
     </properties>
 
     <build>
@@ -205,6 +228,24 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.talend.studio</groupId>
+                <artifactId>bomtool</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>genNotice</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <studioDirectory>${studio.dir}</studioDirectory>
+                    <outputDirectory>${bom.out.dir}</outputDirectory>
+                    <productVersion>${product.version}</productVersion>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -497,6 +538,13 @@
                                         <mkdir dir="${product.dir}" />
                                         <echo>Moving product ZIP ${project.build.directory}/products/${product.final.name}.zip to ${product.dir}</echo>
                                         <move todir="${product.dir}" file="${project.build.directory}/products/${product.final.name}.zip" />
+                                        
+                                        <!-- Copy bom -->
+                                        <property name="bom.build.path" value="${product.build.id}/BOMS" />
+                                        <property name="bom.dir" value="${storage}/${bom.build.path}" />
+                                        <mkdir dir="${bom.dir}" />
+                                        <echo>Copying ${bom.out.dir}/BOM.xlsx to ${bom.dir}/${bom.final.name}</echo>
+                                        <copy tofile="${bom.dir}/${bom.final.name}" file="${bom.out.dir}/BOM.xlsx" />
                                         <if>
                                             <and>
                                                 <equals arg1="${env.HUDSON_URL}" arg2="http://newbuild.talend.com:8180/" />
@@ -504,6 +552,7 @@
                                             </and>
                                             <then>
                                                 <echo file="${storage}/lastnb.txt" append="true">http://newbuild.talend.com/builds/${product.build.path}/${product.final.name}.zip${line.separator}</echo>
+                                                <echo file="${storage}/lastnb.txt" append="true">http://newbuild.talend.com/builds/${bom.build.path}/${bom.final.name}${line.separator}</echo>
                                             </then>
                                         </if>
                                         <exec executable="openssl" dir="${product.dir}" outputproperty="sha256">
