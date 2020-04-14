@@ -60,7 +60,8 @@
         <product.final.name>${storage.prefix}-${product.timestamp}-V${product.version}${revision.filename}</product.final.name>
         <studio.dir>${project.build.directory}/products/${project.artifactId}/${osgi.os}/${osgi.ws}/${osgi.arch}</studio.dir>
         <bom.out.dir>${project.build.directory}/products/${project.artifactId}-bom</bom.out.dir>
-        <bom.final.name>${storage.prefix}-${product.timestamp}-V${product.version}-${revision.filename}-bom.xlsx</bom.final.name>
+        <bom.final.name.prefix>${storage.prefix}-${product.timestamp}-V${product.version}-${revision.filename}</bom.final.name.prefix>
+        <bom.final.name>${bom.final.name.prefix}-bom.xlsx</bom.final.name>
     </properties>
 
     <build>
@@ -545,6 +546,12 @@
                                         <mkdir dir="${bom.dir}" />
                                         <echo>Copying ${bom.out.dir}/BOM.xlsx to ${bom.dir}/${bom.final.name}</echo>
                                         <copy tofile="${bom.dir}/${bom.final.name}" file="${bom.out.dir}/BOM.xlsx" />
+                                        <echo>Copying ${bom.out.dir}/jarlist.json to ${bom.dir}/${bom.final.name.prefix}-jarlist.json</echo>
+                                        <copy tofile="${bom.dir}/${bom.final.name.prefix}-jarlist.json" file="${bom.out.dir}/jarlist.json" />
+                                        <echo>Copying ${bom.out.dir}/NOTICE.txt to ${bom.dir}/${bom.final.name.prefix}-NOTICE.txt</echo>
+                                        <copy tofile="${bom.dir}/${bom.final.name.prefix}-NOTICE.txt" file="${bom.out.dir}/NOTICE.txt" />
+                                        <echo>Copying ${bom.out.dir}/report.txt to ${bom.dir}/${bom.final.name.prefix}-report.txt</echo>
+                                        <copy tofile="${bom.dir}/${bom.final.name.prefix}-report.txt" file="${bom.out.dir}/report.txt" />
                                         <if>
                                             <and>
                                                 <equals arg1="${env.HUDSON_URL}" arg2="http://newbuild.talend.com:8180/" />
@@ -553,6 +560,9 @@
                                             <then>
                                                 <echo file="${storage}/lastnb.txt" append="true">http://newbuild.talend.com/builds/${product.build.path}/${product.final.name}.zip${line.separator}</echo>
                                                 <echo file="${storage}/lastnb.txt" append="true">http://newbuild.talend.com/builds/${bom.build.path}/${bom.final.name}${line.separator}</echo>
+                                                <echo file="${storage}/lastnb.txt" append="true">http://newbuild.talend.com/builds/${bom.build.path}/${bom.final.name.prefix}-jarlist.json${line.separator}</echo>
+                                                <echo file="${storage}/lastnb.txt" append="true">http://newbuild.talend.com/builds/${bom.build.path}/${bom.final.name.prefix}-NOTICE.txt${line.separator}</echo>
+                                                <echo file="${storage}/lastnb.txt" append="true">http://newbuild.talend.com/builds/${bom.build.path}/${bom.final.name.prefix}-report.txt${line.separator}</echo>
                                             </then>
                                         </if>
                                         <exec executable="openssl" dir="${product.dir}" outputproperty="sha256">
