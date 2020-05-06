@@ -12,9 +12,9 @@
         <tycho-extras.version>${tycho.version}</tycho-extras.version>
         <base.version>7.3.1</base.version>
         <!-- osgi.compatible.version is either ${base.version}-SNAPSHOT (snapshots), ${base.version}.<suffix> (milestones), or ${base.version} (GA)-->
-        <osgi.compatible.version>${base.version}.PATCH</osgi.compatible.version>
+        <osgi.compatible.version>${base.version}</osgi.compatible.version>
         <!-- maven.compatible.version is either ${base.version}-SNAPSHOT (snapshots), ${base.version}-<suffix> (milestones), or ${base.version} (GA)-->
-        <maven.compatible.version>${base.version}-PATCH</maven.compatible.version>
+        <maven.compatible.version>${base.version}</maven.compatible.version>
         <repo.type>Release</repo.type>
 		<doc.version>7.3.1-SNAPSHOT</doc.version>
         <talend.nexus.host>https://artifacts-oss.talend.com</talend.nexus.host>
@@ -31,7 +31,7 @@
         <opensourcesnapshot-repo.url>${talend.nexus.url}/TalendOpenSourceSnapshot</opensourcesnapshot-repo.url>
         <opensourcerelease-repo.url>${talend.nexus.url}/TalendOpenSourceRelease</opensourcerelease-repo.url>
         <tos-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/studio/talend-tos-p2-repo/${osgi.compatible.version}/talend-tos-p2-repo-${osgi.compatible.version}.zip-unzip/</tos-p2-repo.url>
-        <tos-deps-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/repo/dependencies.p2.tos/${maven.compatible.version}/dependencies.p2.tos-${maven.compatible.version}.zip-unzip/</tos-deps-p2-repo.url>
+        <tos-deps-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/repo/dependencies.p2.tos/${maven.compatible.version}-patch/dependencies.p2.tos-${maven.compatible.version}-patch.zip-unzip/</tos-deps-p2-repo.url>
         <jgit.dirtyWorkingTree.official>error</jgit.dirtyWorkingTree.official>
         <osgi.ws>win32</osgi.ws>
         <osgi.os>win32</osgi.os>
