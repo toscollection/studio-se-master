@@ -31,7 +31,7 @@
         <opensourcesnapshot-repo.url>${talend.nexus.url}/TalendOpenSourceSnapshot</opensourcesnapshot-repo.url>
         <opensourcerelease-repo.url>${talend.nexus.url}/TalendOpenSourceRelease</opensourcerelease-repo.url>
         <tos-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/studio/talend-tos-p2-repo/${osgi.compatible.version}/talend-tos-p2-repo-${osgi.compatible.version}.zip-unzip/</tos-p2-repo.url>
-        <tos-deps-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/repo/dependencies.p2.tos/7.3.1-PATCH2/dependencies.p2.tos-7.3.1-PATCH2.zip-unzip/</tos-deps-p2-repo.url>
+        <tos-deps-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/repo/dependencies.p2.tos/7.3.1-PATCH/dependencies.p2.tos-7.3.1-PATCH.zip-unzip/</tos-deps-p2-repo.url>
         <jgit.dirtyWorkingTree.official>error</jgit.dirtyWorkingTree.official>
         <osgi.ws>win32</osgi.ws>
         <osgi.os>win32</osgi.os>
@@ -105,7 +105,7 @@
             </snapshots>
             <url>${opensourcesnapshot-repo.url}</url>
         </repository>
-    </repositories>  
+    </repositories>
 
     <build>
         <pluginManagement>
@@ -134,12 +134,12 @@
                 <artifactId>tycho-maven-plugin</artifactId>
                 <version>${tycho.version}</version>
                 <extensions>true</extensions>
-            </plugin>  
+            </plugin>
             <plugin>
                 <groupId>org.eclipse.tycho</groupId>
                 <artifactId>tycho-versions-plugin</artifactId>
                 <version>${tycho.version}</version>
-            </plugin>			
+            </plugin>
             <plugin>
                 <groupId>org.eclipse.tycho</groupId>
                 <artifactId>target-platform-configuration</artifactId>
@@ -170,7 +170,7 @@
                             </restrictTo>
                         </filter>
 
-                        <!-- example 2: remove all providers of the package javax.persistence except the bundle javax.persistence 
+                        <!-- example 2: remove all providers of the package javax.persistence except the bundle javax.persistence
 				 <filter>
 					<type>java-package</type>
 					<id>javax.persistence</id>
@@ -180,13 +180,13 @@
 					</restrictTo>
 				 </filter>
 -->
-                        <!-- example 3: work around Equinox bug 348045 
+                        <!-- example 3: work around Equinox bug 348045
 				 <filter>
 					<type>p2-installable-unit</type>
 					<id>org.eclipse.equinox.servletbridge.extensionbundle</id>
 					<removeAll />
 				 </filter>
--->				 
+-->
                     </filters>
                 </configuration>
             </plugin>
@@ -437,7 +437,7 @@
                                     </files>
                                 </configuration>
                             </execution>
-                        </executions>      
+                        </executions>
                     </plugin>
                     <plugin>
                         <groupId>org.eclipse.tycho</groupId>
@@ -490,7 +490,7 @@
                                             <sequential>
                                                 <echo>Signing @{jarFile}</echo>
                                                 <exec executable="${java.home}/../bin/jarsigner" dir="${project.basedir}/target/" failonerror="true">
-                                                    <arg line="-verbose -digestalg SHA1 -sigalg SHA1withRSA -keystore ${keystore.path} -storepass ${keystore.pass} @{jarFile} talend" /> 
+                                                    <arg line="-verbose -digestalg SHA1 -sigalg SHA1withRSA -keystore ${keystore.path} -storepass ${keystore.pass} @{jarFile} talend" />
                                                 </exec>
                                             </sequential>
                                         </ac:for>
