@@ -8,7 +8,7 @@
     <properties>
         <talend.nexus.host>https://artifacts-oss.talend.com</talend.nexus.host>
         <components.version>0.28.4</components.version>
-        <dataquality.lib.version>8.0.1</dataquality.lib.version>
+        <dataquality.lib.version>8.0.2</dataquality.lib.version>
         <fasterxml.jackson.version>2.10.1</fasterxml.jackson.version>
         <!-- jackson dataformat and jaxb should use version 2.9.10 to make studio compatible with bonita -->
         <fasterxml.jackson.bonita.compatible.version>2.9.10</fasterxml.jackson.bonita.compatible.version>
