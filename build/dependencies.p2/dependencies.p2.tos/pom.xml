@@ -381,6 +381,12 @@
 			<artifactId>woodstox-core</artifactId>
 			<version>5.3.0</version>
 		</dependency>
+        <dependency>
+            <groupId>org.talend.studio</groupId>
+            <artifactId>studio-utils</artifactId>
+            <version>${studio-utils.version}</version>
+            <classifier>bundle</classifier>
+        </dependency>
 	</dependencies>
 
 </project>
