@@ -38,6 +38,7 @@
         <opensourcerelease-repo.url>${talend.nexus.url}/TalendOpenSourceRelease</opensourcerelease-repo.url>
         <tos-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/studio/talend-tos-p2-repo/${osgi.compatible.version}/talend-tos-p2-repo-${osgi.compatible.version}.zip-unzip/</tos-p2-repo.url>
         <tos-deps-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/repo/dependencies.p2.tos/${maven.compatible.version}/dependencies.p2.tos-${maven.compatible.version}.zip-unzip/</tos-deps-p2-repo.url>
+        <eclipse-orbit-p2-repo.url>https://download.eclipse.org/tools/orbit/downloads/drops/R20200831200620/repository/</eclipse-orbit-p2-repo.url>
         <jgit.dirtyWorkingTree.official>error</jgit.dirtyWorkingTree.official>
         <osgi.ws>win32</osgi.ws>
         <osgi.os>win32</osgi.os>
@@ -61,6 +62,11 @@
     </distributionManagement>
 
     <repositories>
+        <repository>
+            <id>eclipse_orbit</id>
+            <url>${eclipse-orbit-p2-repo.url}</url>
+            <layout>p2</layout>
+        </repository>
         <repository>
             <id>tos-deps</id>
             <url>${tos-deps-p2-repo.url}</url>
