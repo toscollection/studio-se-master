@@ -11,7 +11,7 @@
         <components.version>0.28.9</components.version>
         <daikon.version>0.31.10</daikon.version>
         <daikon-ee.format.verison>1.5.0</daikon-ee.format.verison>
-        <daikon.audit.version>1.16.0</daikon.audit.version>
+        <daikon.audit.version>1.16.1</daikon.audit.version>
         <org.talend.daikon.crypto-utils.version>0.31.10</org.talend.daikon.crypto-utils.version>
         <tycho.version>0.22.0</tycho.version>
         <tycho-extras.version>${tycho.version}</tycho-extras.version>
