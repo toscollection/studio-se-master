@@ -387,6 +387,12 @@
             <version>${studio-utils.version}</version>
             <classifier>bundle</classifier>
         </dependency>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov</artifactId>
+            <version>1.68.0</version>
+            <classifier>bundle</classifier>
+        </dependency>
 	</dependencies>
 
 </project>
