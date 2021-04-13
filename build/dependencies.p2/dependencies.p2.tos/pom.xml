@@ -382,6 +382,12 @@
 			<artifactId>woodstox-core</artifactId>
 			<version>5.3.0</version>
 		</dependency>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov</artifactId>
+            <version>1.68.0</version>
+            <classifier>bundle</classifier>
+        </dependency>
 	</dependencies>
 
 </project>
