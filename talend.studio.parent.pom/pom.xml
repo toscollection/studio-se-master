@@ -62,14 +62,15 @@
     </distributionManagement>
 
     <repositories>
-        <repository>
-            <id>eclipse_orbit</id>
-            <url>${eclipse-orbit-p2-repo.url}</url>
-            <layout>p2</layout>
-        </repository>
+        
         <repository>
             <id>tos-deps</id>
             <url>${tos-deps-p2-repo.url}</url>
+            <layout>p2</layout>
+        </repository>
+        <repository>
+            <id>eclipse_orbit</id>
+            <url>${eclipse-orbit-p2-repo.url}</url>
             <layout>p2</layout>
         </repository>
         <repository>

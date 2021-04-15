@@ -393,6 +393,12 @@
             <version>1.68.0</version>
             <classifier>bundle</classifier>
         </dependency>
+        <dependency>
+            <groupId>org.junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+	    <classifier>bundle</classifier>
+        </dependency>
 	</dependencies>
 
 </project>
