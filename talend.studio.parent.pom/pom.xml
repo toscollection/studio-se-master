@@ -36,7 +36,7 @@
         <opensourcesnapshot-repo.url>${talend.nexus.url}/TalendOpenSourceSnapshot</opensourcesnapshot-repo.url>
         <opensourcerelease-repo.url>${talend.nexus.url}/TalendOpenSourceRelease</opensourcerelease-repo.url>
         <tos-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/studio/talend-tos-p2-repo/${osgi.compatible.version}.PATCH/talend-tos-p2-repo-${osgi.compatible.version}.PATCH.zip-unzip/</tos-p2-repo.url>
-        <tos-deps-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/repo/dependencies.p2.tos/${maven.compatible.version}-PATCH-TUP-30255/dependencies.p2.tos-${maven.compatible.version}-PATCH-TUP-30255.zip-unzip/</tos-deps-p2-repo.url>
+        <tos-deps-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/repo/dependencies.p2.tos/${maven.compatible.version}-PATCH/dependencies.p2.tos-${maven.compatible.version}-PATCH.zip-unzip/</tos-deps-p2-repo.url>
         <jgit.dirtyWorkingTree.official>error</jgit.dirtyWorkingTree.official>
         <osgi.ws>win32</osgi.ws>
         <osgi.os>win32</osgi.os>
