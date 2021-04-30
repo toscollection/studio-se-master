@@ -506,7 +506,7 @@
                                             <sequential>
                                                 <echo>Signing @{jarFile}</echo>
                                                 <exec executable="${java.home}/../bin/jarsigner" dir="${project.basedir}/target/" failonerror="true">
-                                                    <arg line="-verbose -digestalg SHA1 -sigalg SHA1withRSA -keystore ${keystore.path} -storepass ${keystore.pass} @{jarFile} talend" /> 
+                                                    <arg line="-verbose -digestalg SHA256 -sigalg SHA256withRSA -keystore ${keystore.path} -storepass ${keystore.pass} @{jarFile} talend" /> 
                                                 </exec>
                                             </sequential>
                                         </ac:for>
