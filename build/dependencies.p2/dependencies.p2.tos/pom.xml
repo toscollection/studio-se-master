@@ -394,6 +394,16 @@
 			<version>4.13.2</version>
 			<classifier>bundle</classifier>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.13-talend</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>4.4.14-talend</version>
+		</dependency>
 	</dependencies>
 
 </project>
