@@ -49,7 +49,7 @@
 				<module>../tcommon-studio-se</module>
 				<module>../tdi-studio-se</module>
 				<module>../tdq-studio-se</module>
-				<module>../tesb-studio-se</module>
+				 <module>../tesb-studio-se</module>
 				<module>../tmdm-common</module>
 				<module>../tmdm-studio-se</module>
 			</modules>

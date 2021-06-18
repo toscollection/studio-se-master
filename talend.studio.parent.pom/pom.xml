@@ -28,17 +28,16 @@
         <talend.nexus.p2unzip.url>${talend.nexus.host}/nexus/content/unzip</talend.nexus.p2unzip.url>
         <opensourcesnapshot-unziprepo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSourceSnapshot/org/talend/repo</opensourcesnapshot-unziprepo.url>
         <opensourcerelease-unziprepo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSourceRelease/org/talend/repo</opensourcerelease-unziprepo.url>
-        <eclipse-repo.url>${opensourcerelease-unziprepo.url}/eclipse-p2-repo/4.10.0/eclipse-p2-repo-4.10.0.zip-unzip</eclipse-repo.url>
-        <eclipse-emf-repo.url>${opensourcesnapshot-unziprepo.url}/emf-compare-update/3.0.1-SNAPSHOT/emf-compare-update-3.0.1-SNAPSHOT.zip-unzip</eclipse-emf-repo.url>
-        <babel-repo.url>${opensourcerelease-unziprepo.url}/eclipse-babel-p2-repo/4.8.0/eclipse-babel-p2-repo-4.8.0.zip-unzip</babel-repo.url>
+        <eclipse-repo.url>${opensourcerelease-unziprepo.url}/eclipse-p2-repo/4.19.0/eclipse-p2-repo-4.19.0.zip-unzip/test</eclipse-repo.url>
+        <!-- if want to use local target platform -->
+        <!--<eclipse-repo.url>file:///D:/Work/eclipse_upgrade/target_platform/target741/test</eclipse-repo.url>-->
+        <babel-repo.url>https://download.eclipse.org/technology/babel/update-site/R0.18.3/2021-03/</babel-repo.url>
         <doc-repo.url>${opensourcesnapshot-unziprepo.url}/talend-doc-p2-repo/${doc.version}/talend-doc-p2-repo-${doc.version}.zip-unzip/</doc-repo.url>
-        <bonita-open-repo.url>${opensourcerelease-unziprepo.url}/bonita-community-p2-repo/7.9.0/bonita-community-p2-repo-7.9.0.zip-unzip/</bonita-open-repo.url>
-        <equinox.build>org.eclipse.equinox.launcher_1.5.200.v20180922-1751.jar</equinox.build>
+        <equinox.build>org.eclipse.equinox.launcher_1.6.100.v20201223-0822.jar</equinox.build>
         <opensourcesnapshot-repo.url>${talend.nexus.url}/TalendOpenSourceSnapshot</opensourcesnapshot-repo.url>
         <opensourcerelease-repo.url>${talend.nexus.url}/TalendOpenSourceRelease</opensourcerelease-repo.url>
         <tos-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/studio/talend-tos-p2-repo/${osgi.compatible.version}/talend-tos-p2-repo-${osgi.compatible.version}.zip-unzip/</tos-p2-repo.url>
         <tos-deps-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/repo/dependencies.p2.tos/${maven.compatible.version}/dependencies.p2.tos-${maven.compatible.version}.zip-unzip/</tos-deps-p2-repo.url>
-        <eclipse-orbit-p2-repo.url>${opensourcerelease-unziprepo.url}/orbit/7.4.1/orbit-7.4.1.zip-unzip</eclipse-orbit-p2-repo.url>
         <jgit.dirtyWorkingTree.official>error</jgit.dirtyWorkingTree.official>
         <osgi.ws>win32</osgi.ws>
         <osgi.os>win32</osgi.os>
@@ -62,20 +61,22 @@
     </distributionManagement>
 
     <repositories>
-        
+
         <repository>
             <id>tos-deps</id>
             <url>${tos-deps-p2-repo.url}</url>
-            <layout>p2</layout>
-        </repository>
-        <repository>
-            <id>eclipse_orbit</id>
-            <url>${eclipse-orbit-p2-repo.url}</url>
+            <!-- setup normally with ${tos-deps-p2-repo.url}, changed for local testing only -->
+            <!--<url>file:///D:/Work/eclipse_upgrade/target_platform/target741/p2-tos</url>-->
             <layout>p2</layout>
         </repository>
         <repository>
             <id>eclipse_repo</id>
             <url>${eclipse-repo.url}</url>
+            <layout>p2</layout>
+        </repository>
+        <repository>
+            <id>atl_repo</id>
+            <url>https://download.eclipse.org/mmt/atl/updates/releases/4.4.0</url>
             <layout>p2</layout>
         </repository>
         <repository>
@@ -89,13 +90,8 @@
             <layout>p2</layout>
         </repository>
         <repository>
-            <id>bonita_open_repo</id>
-            <url>${bonita-open-repo.url}</url>
-            <layout>p2</layout>
-        </repository>
-        <repository>
             <id>swtbot</id>
-            <url>https://artifacts-oss.talend.com/nexus/content/unzip/TalendP2UnzipOpenSourceRelease/org/talend/repo/talend-swtbot/2.7.0/talend-swtbot-2.7.0.zip-unzip</url>
+            <url>https://download.eclipse.org/technology/swtbot/releases/3.0.0/</url>
             <layout>p2</layout>
         </repository>
         <repository>
@@ -179,7 +175,7 @@
                             <type>eclipse-plugin</type>
                             <id>org.eclipse.jdt.core</id>
                             <restrictTo>
-                                <version>3.16.0.xx-201903290056-e1812-RELEASE</version>
+                                <version>3.25.0.v20210223-0522</version>
                             </restrictTo>
                         </filter>
 
