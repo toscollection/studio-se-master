@@ -28,7 +28,7 @@
         <talend.nexus.p2unzip.url>${talend.nexus.host}/nexus/content/unzip</talend.nexus.p2unzip.url>
         <opensourcesnapshot-unziprepo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSourceSnapshot/org/talend/repo</opensourcesnapshot-unziprepo.url>
         <opensourcerelease-unziprepo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSourceRelease/org/talend/repo</opensourcerelease-unziprepo.url>
-        <eclipse-repo.url>${opensourcerelease-unziprepo.url}/eclipse-p2-repo/4.19.0/eclipse-p2-repo-4.19.0.zip-unzip/test</eclipse-repo.url>
+        <eclipse-repo.url>${opensourcerelease-unziprepo.url}/eclipse-p2-repo/4.19.1/eclipse-p2-repo-4.19.1.zip-unzip/</eclipse-repo.url>
         <!-- if want to use local target platform -->
         <!--<eclipse-repo.url>file:///D:/Work/eclipse_upgrade/target_platform/target741/test</eclipse-repo.url>-->
         <babel-repo.url>https://download.eclipse.org/technology/babel/update-site/R0.18.3/2021-03/</babel-repo.url>
