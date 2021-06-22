@@ -65,6 +65,7 @@
       <feature id="org.talend.help.di.feature"/>
       <feature id="org.talend.help.bd.feature"/>
       <feature id="org.talend.help.esb.feature"/>
+      <feature id="org.talend.gmf.feature"/>
    </features>
 
 
