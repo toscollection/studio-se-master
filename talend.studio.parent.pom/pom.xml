@@ -14,6 +14,7 @@
         <daikon.audit.version>1.16.1</daikon.audit.version>
         <org.talend.daikon.crypto-utils.version>0.31.11</org.talend.daikon.crypto-utils.version>
         <studio-utils.version>1.0.2</studio-utils.version>
+        <compcache.creator.version>1.0.0-SNAPSHOT</compcache.creator.version>
         <tycho.version>1.7.0</tycho.version>
         <tycho-extras.version>${tycho.version}</tycho-extras.version>
         <base.version>7.4.1</base.version>
@@ -212,6 +213,19 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.talend.ci</groupId>
+                <artifactId>component-cache-creator</artifactId>
+                <version>${compcache.creator.version}</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
