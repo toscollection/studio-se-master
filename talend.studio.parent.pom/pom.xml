@@ -117,6 +117,19 @@
         </repository>
     </repositories>  
 
+	<pluginRepositories>
+		<pluginRepository>
+			<id>talend-openplugins-snapshot</id>
+			<name>talend-openplugins-snapshot</name>
+			<url>${opensourcesnapshot-repo.url}</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>talend-openplugins-release</id>
+			<name>talend-openplugins-release</name>
+			<url>${opensourcerelease-repo.url}</url>
+		</pluginRepository>
+	</pluginRepositories>
+
     <build>
         <pluginManagement>
             <plugins>
