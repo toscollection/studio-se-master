@@ -9,10 +9,10 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <components.version>0.33.0-SNAPSHOT</components.version>
-        <daikon.version>0.31.11</daikon.version>
+        <daikon.version>0.31.12</daikon.version>
         <daikon-ee.format.verison>3.2.0</daikon-ee.format.verison>
         <daikon.audit.version>1.16.1</daikon.audit.version>
-        <org.talend.daikon.crypto-utils.version>0.31.11</org.talend.daikon.crypto-utils.version>
+        <org.talend.daikon.crypto-utils.version>0.31.12</org.talend.daikon.crypto-utils.version>
         <studio-utils.version>1.0.2</studio-utils.version>
         <compcache.creator.version>1.0.0-SNAPSHOT</compcache.creator.version>
         <tycho.version>1.7.0</tycho.version>
