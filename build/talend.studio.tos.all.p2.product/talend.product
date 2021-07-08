@@ -62,9 +62,6 @@
       <feature id="org.talend.updates.feature"/>
       <feature id="org.talend.utils.feature"/>
       <feature id="org.talend.dataquality.se.test.feature"/>
-      <feature id="org.talend.help.di.feature"/>
-      <feature id="org.talend.help.bd.feature"/>
-      <feature id="org.talend.help.esb.feature"/>
       <feature id="org.talend.gmf.feature"/>
    </features>
 
