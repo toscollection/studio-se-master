@@ -23,7 +23,6 @@
       <feature id="org.talend.rcp.branding.esbstandard.feature"/>
       <feature id="org.talend.rcp.branding.tos.test.feature"/>
       <feature id="org.talend.mdm.tom.test.feature"/>
-      <feature id="org.talend.babel.all.tos.feature"/>
       <feature id="org.talend.bigdata.se.test.feature"/>
       <feature id="org.talend.esb.tooling.test.feature"/>
       <feature id="org.talend.camel.core.feature"/>
