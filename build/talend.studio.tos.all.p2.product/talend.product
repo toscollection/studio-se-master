@@ -42,7 +42,7 @@
       <feature id="org.talend.jdt.feature"/>
       <feature id="org.talend.libraries.jdbc.feature"/>
       <feature id="org.talend.m2e.feature"/>
-      <feature id="org.talend.platform.feature"/>
+      <!--feature id="org.talend.platform.feature"/-->
       <feature id="org.talend.rcp.feature"/>
       <feature id="org.talend.repository.feature"/>
       <feature id="org.talend.repository.services.feature"/>

@@ -9,6 +9,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <components.version>0.34.0-SNAPSHOT</components.version>
+        <tacokit.components.version>1.24.0-SNAPSHOT</tacokit.components.version>
         <daikon.version>0.31.12</daikon.version>
         <daikon-ee.format.verison>3.2.0</daikon-ee.format.verison>
         <daikon.audit.version>1.16.1</daikon.audit.version>
@@ -217,6 +218,7 @@
                     <compilerVersion>1.8</compilerVersion>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <useProjectSettings>false</useProjectSettings>
                 </configuration>
             </plugin>
             <plugin>
