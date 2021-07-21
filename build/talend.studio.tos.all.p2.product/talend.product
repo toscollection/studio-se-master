@@ -60,6 +60,8 @@
       <feature id="org.talend.utils.feature"/>
       <feature id="org.talend.dataquality.se.test.feature"/>
       <feature id="org.talend.gmf.feature"/>
+      <feature id="org.talend.studio.components.bd.couchbase.feature"/>
+      <feature id="org.talend.studio.components.bd.cosmosdb.feature"/>
    </features>
 
 
