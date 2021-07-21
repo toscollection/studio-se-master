@@ -39,9 +39,7 @@
       <feature id="org.talend.esbstandard.feature"/>
       <feature id="org.talend.hadoop.distribution.feature"/>
       <feature id="org.talend.help.feature"/>
-      <feature id="org.talend.jdt.feature"/>
       <feature id="org.talend.libraries.jdbc.feature"/>
-      <feature id="org.talend.m2e.feature"/>
       <!--feature id="org.talend.platform.feature"/-->
       <feature id="org.talend.rcp.feature"/>
       <feature id="org.talend.repository.feature"/>
