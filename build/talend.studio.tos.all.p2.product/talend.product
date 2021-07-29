@@ -62,6 +62,17 @@
       <feature id="org.talend.gmf.feature"/>
       <feature id="org.talend.studio.components.bd.couchbase.feature"/>
       <feature id="org.talend.studio.components.bd.cosmosdb.feature"/>
+      <feature id="org.talend.studio.components.tcompv0.jdbc.feature"/>
+      <feature id="org.talend.studio.components.tcompv0.couchbase.feature"/>
+      <feature id="org.talend.studio.components.tcompv0.netsuite.feature"/>
+      <feature id="org.talend.studio.components.tcompv0.marklogic.feature"/>
+      <feature id="org.talend.studio.components.tcompv0.googledrive.feature"/>
+      <feature id="org.talend.studio.components.tcompv0.marketo.feature"/>
+      <feature id="org.talend.studio.components.tcompv0.azurestorage.feature"/>
+      <feature id="org.talend.studio.components.tcompv0.snowflake.feature"/>
+      <feature id="org.talend.studio.components.tcompv0.jira.feature"/>
+      <feature id="org.talend.studio.components.tcompv0.splunk.feature"/>
+      <feature id="org.talend.studio.components.tcompv0.salesforce.feature"/>
    </features>
 
 
