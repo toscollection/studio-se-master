@@ -43,8 +43,6 @@
       <feature id="org.talend.rcp.feature"/>
       <feature id="org.talend.repository.feature"/>
       <feature id="org.talend.repository.services.feature"/>
-      <feature id="org.talend.sbi.feature"/>
-      <feature id="org.talend.spagic.feature"/>
       <feature id="org.talend.tom.feature"/>
       <feature id="org.talend.top.feature"/>
       <feature id="org.talend.top.libraries.feature"/>
