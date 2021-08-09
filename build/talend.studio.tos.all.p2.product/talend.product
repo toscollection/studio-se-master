@@ -30,7 +30,6 @@
       <feature id="org.talend.camel.feature"/>
       <feature id="org.talend.commons.feature"/>
       <feature id="org.talend.core.feature"/>
-      <feature id="org.talend.designer.business.feature"/>
       <feature id="org.talend.designer.feature"/>
       <feature id="org.talend.esb.tooling.feature"/>
       <feature id="org.talend.esb.tooling.rs.provider.feature"/>
@@ -59,7 +58,6 @@
       <feature id="org.talend.updates.feature"/>
       <feature id="org.talend.utils.feature"/>
       <feature id="org.talend.dataquality.se.test.feature"/>
-      <feature id="org.talend.gmf.feature"/>
       <feature id="org.talend.studio.components.bd.couchbase.feature"/>
       <feature id="org.talend.studio.components.bd.cosmosdb.feature"/>
       <feature id="org.talend.studio.components.tcompv0.jdbc.feature"/>
