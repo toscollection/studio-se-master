@@ -14,6 +14,7 @@
         <m2.fasterxml.jackson.version>2.11.4</m2.fasterxml.jackson.version>
         <jackson-codehaus.version>1.9.15-TALEND</jackson-codehaus.version>
         <daikon.version>0.31.12</daikon.version>
+        <slf4j-api.version>1.7.25</slf4j-api.version>
         <daikon-ee.format.verison>3.2.0</daikon-ee.format.verison>
         <daikon.audit.version>1.16.1</daikon.audit.version>
         <org.talend.daikon.crypto-utils.version>0.31.12</org.talend.daikon.crypto-utils.version>
@@ -111,7 +112,7 @@
             </snapshots>
             <url>${opensourcesnapshot-repo.url}</url>
         </repository>
-    </repositories>  
+    </repositories>
 
 	<pluginRepositories>
 		<pluginRepository>
@@ -153,12 +154,12 @@
                 <artifactId>tycho-maven-plugin</artifactId>
                 <version>${tycho.version}</version>
                 <extensions>true</extensions>
-            </plugin>  
+            </plugin>
             <plugin>
                 <groupId>org.eclipse.tycho</groupId>
                 <artifactId>tycho-versions-plugin</artifactId>
                 <version>${tycho.version}</version>
-            </plugin>			
+            </plugin>
             <plugin>
                 <groupId>org.eclipse.tycho</groupId>
                 <artifactId>target-platform-configuration</artifactId>
@@ -189,7 +190,7 @@
                             </restrictTo>
                         </filter> -->
 
-                        <!-- example 2: remove all providers of the package javax.persistence except the bundle javax.persistence 
+                        <!-- example 2: remove all providers of the package javax.persistence except the bundle javax.persistence
 				 <filter>
 					<type>java-package</type>
 					<id>javax.persistence</id>
@@ -199,13 +200,13 @@
 					</restrictTo>
 				 </filter>
 -->
-                        <!-- example 3: work around Equinox bug 348045 
+                        <!-- example 3: work around Equinox bug 348045
 				 <filter>
 					<type>p2-installable-unit</type>
 					<id>org.eclipse.equinox.servletbridge.extensionbundle</id>
 					<removeAll />
 				 </filter>
--->				 
+-->
                     </filters>
                 </configuration>
             </plugin>
@@ -473,7 +474,7 @@
                                     </files>
                                 </configuration>
                             </execution>
-                        </executions>      
+                        </executions>
                     </plugin>
                     <plugin>
                         <groupId>org.eclipse.tycho</groupId>
@@ -526,7 +527,7 @@
                                             <sequential>
                                                 <echo>Signing @{jarFile}</echo>
                                                 <exec executable="${java.home}/../bin/jarsigner" dir="${project.basedir}/target/" failonerror="true">
-                                                    <arg line="-verbose -digestalg SHA1 -sigalg SHA1withRSA -keystore ${keystore.path} -storepass ${keystore.pass} @{jarFile} talend" /> 
+                                                    <arg line="-verbose -digestalg SHA1 -sigalg SHA1withRSA -keystore ${keystore.path} -storepass ${keystore.pass} @{jarFile} talend" />
                                                 </exec>
                                             </sequential>
                                         </ac:for>
