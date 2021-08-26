@@ -247,7 +247,9 @@
         <profile>
             <id>nonofficial</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <property>
+                    <name>!buildRootDir</name>
+                </property>
             </activation>
             <properties>
                 <release.suffix>-SNAPSHOT</release.suffix>
@@ -396,6 +398,7 @@
             <properties>
                 <talendtargetplatform.path>${buildRootDir}/../targetplatform</talendtargetplatform.path>
                 <talendtargetplatformversion.path>${talendtargetplatform.path}/${product.version}</talendtargetplatformversion.path>
+                <skipBom>false</skipBom>
             </properties>
             <build>
                 <plugins>
