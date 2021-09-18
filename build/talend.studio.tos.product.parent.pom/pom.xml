@@ -134,7 +134,7 @@
                                 <artifactItem>
                                     <groupId>${project.groupId}</groupId>
                                     <artifactId>eclipse-launcher-binaries</artifactId>
-                                    <version>7.4.1</version>
+                                    <version>8.0.1</version>
                                     <type>zip</type>
                                     <overWrite>true</overWrite>
                                     <outputDirectory>${studio.dir}</outputDirectory>
@@ -142,7 +142,7 @@
                                 <artifactItem>
                                     <groupId>${project.groupId}</groupId>
                                     <artifactId>eclipse-launcher-mac-${launcher.prefix}</artifactId>
-                                    <version>7.4.1</version>
+                                    <version>8.0.1</version>
                                     <type>zip</type>
                                     <overWrite>true</overWrite>
                                     <outputDirectory>${studio.dir}</outputDirectory>
@@ -370,13 +370,7 @@
                                         <mapper type="regexp" from="(.*)launcher(.*)" to="\1${launcher.prefix}\2" />
                                     </mapper>
                                 </move>
-                                <loadfile property="launcher_sh" srcFile="${studio.dir}/${launcher.prefix}-linux-gtk-x86.sh">
-                                    <filterchain>
-                                        <expandproperties />
-                                    </filterchain>
-                                </loadfile>
-                                <echo file="${studio.dir}/${launcher.prefix}-linux-gtk-x86.sh">${launcher_sh}</echo>
-                                <ac:for xmlns:ac="antlib:net.sf.antcontrib" list="linux-gtk-x86_64,win-x86_64" param="platform">
+                                <ac:for xmlns:ac="antlib:net.sf.antcontrib" list="linux-gtk-x86_64,linux-gtk-aarch64,win-x86_64" param="platform">
                                     <sequential>
                                         <copy tofile="${studio.dir}/${launcher.prefix}-@{platform}.ini" file="${project.basedir}/launcher_64.ini" />
                                     </sequential>
