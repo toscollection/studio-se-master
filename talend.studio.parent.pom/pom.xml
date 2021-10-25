@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
     <groupId>org.talend.studio</groupId>
     <artifactId>parent-pom</artifactId>
-    <version>8.0.1</version>
+    <version>8.0.1-PATCH</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -24,9 +24,9 @@
         <tycho-extras.version>${tycho.version}</tycho-extras.version>
         <base.version>8.0.1</base.version>
         <!-- osgi.compatible.version is either ${base.version}-SNAPSHOT (snapshots), ${base.version}.<suffix> (milestones), or ${base.version} (GA)-->
-        <osgi.compatible.version>${base.version}</osgi.compatible.version>
+        <osgi.compatible.version>${base.version}.PATCH</osgi.compatible.version>
         <!-- maven.compatible.version is either ${base.version}-SNAPSHOT (snapshots), ${base.version}-<suffix> (milestones), or ${base.version} (GA)-->
-        <maven.compatible.version>${base.version}</maven.compatible.version>
+        <maven.compatible.version>${base.version}-PATCH</maven.compatible.version>
         <repo.type>Release</repo.type>
 		<doc.version>7.3.1-SNAPSHOT</doc.version>
         <talend.nexus.host>https://artifacts-oss.talend.com</talend.nexus.host>
