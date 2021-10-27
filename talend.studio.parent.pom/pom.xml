@@ -14,7 +14,7 @@
         <m2.fasterxml.jackson.version>2.11.4</m2.fasterxml.jackson.version>
         <jackson-codehaus.version>1.9.15-TALEND</jackson-codehaus.version>
         <daikon.version>0.31.12</daikon.version>
-        <slf4j-api.version>1.7.25</slf4j-api.version>
+        <slf4j-api.version>1.7.29</slf4j-api.version>
         <daikon-ee.format.verison>3.2.0</daikon-ee.format.verison>
         <daikon.audit.version>1.16.1</daikon.audit.version>
         <org.talend.daikon.crypto-utils.version>0.31.12</org.talend.daikon.crypto-utils.version>
