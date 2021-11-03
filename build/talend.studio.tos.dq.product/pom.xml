@@ -10,4 +10,5 @@
 
 	<artifactId>org.talend.studio.tos.dq.product</artifactId>
 	<packaging>eclipse-repository</packaging>
+	
 </project>
