@@ -9,7 +9,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <components.version>0.37.0</components.version>
-        <tacokit.components.version>1.26.0</tacokit.components.version>
+        <tacokit.components.version>1.28.0-SNAPSHOT</tacokit.components.version>
         <component-runtime.version>1.37.0</component-runtime.version>
         <m2.fasterxml.jackson.version>2.11.4</m2.fasterxml.jackson.version>
         <jackson-codehaus.version>1.9.15-TALEND</jackson-codehaus.version>
