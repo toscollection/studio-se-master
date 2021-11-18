@@ -459,6 +459,7 @@
                 <product.version>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</product.version>
                 <timestamp>${maven.build.timestamp}</timestamp>
                 <maven.build.timestamp.format>yyyyMMdd'_'HHmm</maven.build.timestamp.format>
+                <tycho.buildtimestamp.format>${maven.build.timestamp.format}</tycho.buildtimestamp.format>
             </properties>
             <repositories>
                 <repository>
@@ -495,7 +496,7 @@
                         </dependencies>
                         <configuration>
                             <strictBinIncludes>false</strictBinIncludes>
-                            <format>yyyyMMdd'_'HHmm</format>
+                            <format>${tycho.buildtimestamp.format}</format>
                             <archive>
                                 <addMavenDescriptor>false</addMavenDescriptor>
                                 <!-- By default, name of the current user is inserted into generated MANIFEST.MF files -->
