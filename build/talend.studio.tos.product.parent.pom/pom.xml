@@ -332,11 +332,13 @@
                         <configuration>
                             <target>
                                 <taskdef resource="net/sf/antcontrib/antcontrib.properties" classpathref="maven.plugin.classpath" />
-                                <echo>Looking for ${studio.dir}/plugins/${product.branding.platform}_${product.version}*</echo>
+                                <propertyregex property="version.majorminor" input="${product.version}" regexp="^([0-9_]+)\.([0-9_]+)\.(.*)" select="\1.\2" casesensitive="false" />
+                                <echo>Looking for ${studio.dir}/plugins/${product.branding.platform}_${version.majorminor}*</echo>
                                 <echo>buildQualifier=${buildQualifier}</echo>
                                 <echo>product.timestamp=${product.timestamp}</echo>
+                                <echo>version.majorminor=${version.majorminor}</echo>
                                 <echo>version.full=${version.full}</echo>
-                                <fileset dir="${studio.dir}/plugins" includes="${product.branding.platform}_${product.version}*/about.mappings" id="aboutmappingspath_temp" />
+                                <fileset dir="${studio.dir}/plugins" includes="${product.branding.platform}_${version.majorminor}*/about.mappings" id="aboutmappingspath_temp" />
                                 <pathconvert property="aboutmappingspath" refid="aboutmappingspath_temp" />
                                 <echo>aboutmappingspath=${aboutmappingspath}</echo>
                                 <loadfile property="about" srcFile="${aboutmappingspath}">
