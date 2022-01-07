@@ -12,7 +12,7 @@
         <tacokit.components.version>1.29.0-SNAPSHOT</tacokit.components.version>
         <component-runtime.version>1.40.0</component-runtime.version>
         <m2.fasterxml.jackson.version>2.11.4</m2.fasterxml.jackson.version>
-        <jackson-codehaus.version>1.9.15-TALEND</jackson-codehaus.version>
+        <jackson-codehaus.version>1.9.16-TALEND</jackson-codehaus.version>
         <daikon.version>0.31.12</daikon.version>
         <slf4j-api.version>1.7.29</slf4j-api.version>
         <daikon-ee.format.verison>3.2.0</daikon-ee.format.verison>
