@@ -8,7 +8,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <components.version>0.37.4</components.version>
+        <components.version>0.37.5</components.version>
         <tacokit.components.version>1.30.2</tacokit.components.version>
         <component-runtime.version>1.41.0</component-runtime.version>
         <m2.fasterxml.jackson.version>2.11.4</m2.fasterxml.jackson.version>
