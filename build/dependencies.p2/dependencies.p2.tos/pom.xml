@@ -404,6 +404,11 @@
 			<artifactId>httpcore</artifactId>
 			<version>4.4.14-talend</version>
 		</dependency>
+		<dependency>
+			<groupId>ch.qos.reload4j</groupId>
+			<artifactId>reload4j</artifactId>
+			<version>1.2.19-ORBIT</version>
+		</dependency>
 	</dependencies>
 
 </project>
