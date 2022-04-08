@@ -363,7 +363,7 @@
         <dependency>
             <groupId>ch.qos.reload4j</groupId>
             <artifactId>reload4j</artifactId>
-            <version>1.2.19-ORBIT</version>
+            <version>1.2.19-TALEND</version>
         </dependency>
 	</dependencies>
 
