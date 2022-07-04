@@ -18,8 +18,8 @@
         <slf4j-api.version>1.7.29</slf4j-api.version>
         <daikon-ee.format.verison>3.2.0</daikon-ee.format.verison>
         <daikon.audit.version>1.16.1</daikon.audit.version>
-        <org.talend.daikon.crypto-utils.version>0.31.12</org.talend.daikon.crypto-utils.version>
-        <studio-utils.version>1.0.8</studio-utils.version>
+        <org.talend.daikon.crypto-utils.version>6.8.2</org.talend.daikon.crypto-utils.version>
+        <studio-utils.version>1.0.9</studio-utils.version>
         <compcache.creator.version>1.0.0</compcache.creator.version>
         <tycho.version>1.7.0</tycho.version>
         <tycho-extras.version>${tycho.version}</tycho-extras.version>
