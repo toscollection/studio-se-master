@@ -12,7 +12,7 @@
     <packaging>pom</packaging>
     <properties>
         <talend.nexus.host>https://artifacts-oss.talend.com</talend.nexus.host>
-        <dataquality.lib.version>9.1.7</dataquality.lib.version>
+        <dataquality.lib.version>9.1.8</dataquality.lib.version>
         <fasterxml.jackson.version>2.13.2</fasterxml.jackson.version>
         <fasterxml.jackson.databind.version>2.13.2.2</fasterxml.jackson.databind.version>
     </properties>
