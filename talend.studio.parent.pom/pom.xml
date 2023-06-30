@@ -30,17 +30,8 @@
         <maven.compatible.version>${base.version}-SNAPSHOT</maven.compatible.version>
         <repo.type>Snapshot</repo.type>
 		<doc.version>7.3.1-SNAPSHOT</doc.version>
-        <talend.nexus.host>https://artifacts-oss.talend.com</talend.nexus.host>
-        <talend.nexus.url>${talend.nexus.host}/nexus/content/repositories</talend.nexus.url>
-        <talend.nexus.p2unzip.url>${talend.nexus.host}/nexus/content/unzip</talend.nexus.p2unzip.url>
-        <opensourcesnapshot-unziprepo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSourceSnapshot/org/talend/repo</opensourcesnapshot-unziprepo.url>
-        <opensourcerelease-unziprepo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSourceRelease/org/talend/repo</opensourcerelease-unziprepo.url>
-        <eclipse-repo.url>${opensourcerelease-unziprepo.url}/eclipse-p2-repo/4.20/eclipse-p2-repo-4.20.zip-unzip/</eclipse-repo.url>
-        <babel-repo.url>${opensourcerelease-unziprepo.url}/babel-r2021-06/0.19.0/babel-r2021-06-0.19.0.zip-unzip/</babel-repo.url>
-        <opensourcesnapshot-repo.url>${talend.nexus.url}/TalendOpenSourceSnapshot</opensourcesnapshot-repo.url>
-        <opensourcerelease-repo.url>${talend.nexus.url}/TalendOpenSourceRelease</opensourcerelease-repo.url>
-        <tos-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/studio/talend-tos-p2-repo/${osgi.compatible.version}/talend-tos-p2-repo-${osgi.compatible.version}.zip-unzip/</tos-p2-repo.url>
-        <tos-deps-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/repo/dependencies.p2.tos/${maven.compatible.version}/dependencies.p2.tos-${maven.compatible.version}.zip-unzip/</tos-deps-p2-repo.url>
+        <opensourcerelease-repo.url>https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease/</opensourcerelease-repo.url>
+        <opensourcesnapshot-repo.url>https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceSnapshot/</opensourcesnapshot-repo.url>
         <jgit.dirtyWorkingTree.official>error</jgit.dirtyWorkingTree.official>
         <osgi.ws>win32</osgi.ws>
         <osgi.os>win32</osgi.os>
@@ -51,13 +42,13 @@
     <distributionManagement>
         <snapshotRepository>
             <id>talend_nexus_deployment</id>
-            <url>${opensourcesnapshot-repo.url}</url>
+            <url>https://talendartifactorytest.jfrog.io/artifactory/maven-dev-local/</url>
             <snapshots><enabled>true</enabled></snapshots>
             <releases><enabled>false</enabled></releases>
         </snapshotRepository>
         <repository>
             <id>talend_nexus_deployment</id>
-            <url>${opensourcerelease-repo.url}</url>
+            <url>https://talendartifactorytest.jfrog.io/artifactory/maven-dev-local/</url>
             <snapshots><enabled>false</enabled></snapshots>
             <releases><enabled>true</enabled></releases>
         </repository>
@@ -65,10 +56,8 @@
 
     <repositories>
         <repository>
-            <id>tos-deps</id>
-            <url>${tos-deps-p2-repo.url}</url>
-            <!-- setup normally with ${tos-deps-p2-repo.url}, changed for local testing only -->
-            <!--<url>file:///D:/Work/eclipse_upgrade/target_platform/target741/p2-tos</url>-->
+            <id>artifactory_tosp2</id>
+            <url>https://talendartifactorytest.jfrog.io/artifactory/tlnd-p2-dev/org/talend/repo/dependencies.p2.tos/8.8.8-SNAPSHOT/dependencies.p2.tos-8.8.8-SNAPSHOT.zip!</url>
             <layout>p2</layout>
         </repository>
         <repository>
@@ -229,13 +218,14 @@
 			</activation>
     		<repositories>
 				<repository>
-                    <id>eclipse_repo</id>
-                    <url>${eclipse-repo.url}</url>
+                    <id>artifactory_eclipse
+                    </id>
+                    <url>https://talendartifactorytest.jfrog.io/artifactory/tlnd-p2-dev/org/talend/repo/eclipse-p2-repo/4.20/eclipse-p2-repo-4.20.zip!</url>
                     <layout>p2</layout>
  				</repository>
                 <repository>
-                    <id>babel_repo</id>
-                    <url>${babel-repo.url}</url>
+                    <id>artifactory_babel</id>
+                    <url>https://talendartifactorytest.jfrog.io/artifactory/tlnd-p2-dev/org/talend/repo/babel-r2021-06/0.19.0/babel-r2021-06-0.19.0.zip!</url>
                     <layout>p2</layout>
                 </repository>
                 <repository>

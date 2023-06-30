@@ -11,7 +11,6 @@
     <artifactId>dependencies.p2</artifactId>
     <packaging>pom</packaging>
     <properties>
-        <talend.nexus.host>https://artifacts-oss.talend.com</talend.nexus.host>
         <dataquality.lib.version>9.1.14-SNAPSHOT</dataquality.lib.version>
         <fasterxml.jackson.version>2.13.4</fasterxml.jackson.version>
         <fasterxml.jackson.databind.version>2.13.4.2</fasterxml.jackson.databind.version>
@@ -19,14 +18,14 @@
 
     <distributionManagement>
         <snapshotRepository>
-            <id>talend_nexus_deployment</id>
-            <url>${talend.nexus.host}/nexus/content/repositories/TalendOpenSourceSnapshot/</url>
+            <id>artifactory</id>
+            <url>https://talendartifactorytest.jfrog.io/artifactory/maven-dev-local/</url>
             <snapshots><enabled>true</enabled></snapshots>
             <releases><enabled>false</enabled></releases>
         </snapshotRepository>
         <repository>
-            <id>talend_nexus_deployment</id>
-            <url>${talend.nexus.host}/nexus/content/repositories/TalendOpenSourceRelease/</url>
+            <id>artifactory</id>
+            <url>https://talendartifactorytest.jfrog.io/artifactory/maven-dev-local/</url>
             <snapshots><enabled>false</enabled></snapshots>
             <releases><enabled>true</enabled></releases>
         </repository>
@@ -136,7 +135,7 @@
                             <packaging>zip</packaging>
                             <generatePom>true</generatePom>
                             <url>${targetrepository}</url>
-                            <repositoryId>talend_nexus_deployment</repositoryId>
+                            <repositoryId>artifactory</repositoryId>
                             <artifactId>${project.artifactId}</artifactId>
                             <groupId>org.talend.repo</groupId>
                             <version>${project.version}</version>
