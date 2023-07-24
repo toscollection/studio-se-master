@@ -14,11 +14,11 @@
         <m2.fasterxml.jackson.version>2.13.4</m2.fasterxml.jackson.version>
         <m2.fasterxml.jackson.databind.version>2.13.4.2</m2.fasterxml.jackson.databind.version>
         <jackson-codehaus.version>1.9.16-TALEND</jackson-codehaus.version>
-        <daikon.version>7.0.5</daikon.version>
+        <daikon.version>7.1.16</daikon.version>
         <slf4j-api.version>1.7.34</slf4j-api.version>
         <daikon-ee.format.verison>3.2.0</daikon-ee.format.verison>
         <daikon.audit.version>1.16.1</daikon.audit.version>
-        <org.talend.daikon.crypto-utils.version>7.0.5</org.talend.daikon.crypto-utils.version>
+        <org.talend.daikon.crypto-utils.version>7.1.16</org.talend.daikon.crypto-utils.version>
         <studio-utils.version>1.0.13</studio-utils.version>
         <compcache.creator.version>1.0.0</compcache.creator.version>
         <tycho.version>1.7.0</tycho.version>
