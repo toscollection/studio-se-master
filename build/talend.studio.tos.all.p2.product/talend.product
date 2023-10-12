@@ -65,8 +65,6 @@
       <feature id="org.talend.studio.components.tcompv0.marketo.feature"/>
       <feature id="org.talend.studio.components.tcompv0.azurestorage.feature"/>
       <feature id="org.talend.studio.components.tcompv0.snowflake.feature"/>
-      <feature id="org.talend.studio.components.tcompv0.jira.feature"/>
-      <feature id="org.talend.studio.components.tcompv0.splunk.feature"/>
       <feature id="org.talend.studio.components.tcompv0.salesforce.feature"/>
       <feature id="org.talend.gmf.feature"/>
       <feature id="org.talend.platform.feature"/>
