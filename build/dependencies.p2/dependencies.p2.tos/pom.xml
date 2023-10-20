@@ -112,7 +112,7 @@
 		<dependency>
 			<groupId>com.cedarsoftware</groupId>
 			<artifactId>json-io</artifactId>
-			<version>4.13.1-TALEND</version>
+			<version>4.14.0-TALEND</version>
 		</dependency>
 
         <dependency>
