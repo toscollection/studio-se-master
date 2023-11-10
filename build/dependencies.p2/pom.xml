@@ -99,8 +99,9 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.codehaus.groovy.maven</groupId>
-                <artifactId>gmaven-plugin</artifactId>
+                <groupId>org.codehaus.gmavenplus</groupId>
+                <artifactId>gmavenplus-plugin</artifactId>
+                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <id>choose-target-repository</id>
@@ -109,6 +110,7 @@
                             <goal>execute</goal>
                         </goals>
                         <configuration>
+							<scripts>
                             <source>
                             if (project.version.endsWith("-SNAPSHOT")){
                               project.properties.targetrepository = project.distributionManagement.snapshotRepository.url;
@@ -117,9 +119,18 @@
                               project.properties.targetrepository = project.distributionManagement.repository.url;
                             }
                             </source>
+                            </scripts>
                         </configuration>
                     </execution>
                 </executions>
+                <dependencies>
+                	<dependency>
+					    <groupId>org.apache.groovy</groupId>
+					    <artifactId>groovy-all</artifactId>
+					    <version>4.0.13</version>
+					    <type>pom</type>
+					</dependency>
+				</dependencies>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -148,7 +159,7 @@
             <plugin>
                 <groupId>org.eclipse.tycho.extras</groupId>
                 <artifactId>tycho-p2-extras-plugin</artifactId>
-                <version>0.22.0</version>
+                <version>4.0.0</version>
                 <executions>
                     <execution>
                         <id>create-p2-repository</id>

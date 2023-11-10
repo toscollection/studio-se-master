@@ -4,10 +4,6 @@
 <product uid="org.talend.studio.tos.bigdata.product" id="org.talend.rcp.branding.tos.bigdata.product" useFeatures="true" includeLaunchers="false" version="8.0.1.qualifier">
 
    <configIni use="default">
-      <linux>config.ini</linux>
-      <macosx>config.ini</macosx>
-      <solaris>config.ini</solaris>
-      <win32>config.ini</win32>
    </configIni>
 
    <features>
@@ -15,7 +11,7 @@
    </features>
 
    <configurations>
-      <plugin id="org.apache.felix.scr" autoStart="true" version="2.1.24.v20200924-1939" startLevel="2" />
+      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="2" version="2.2.6" />
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />

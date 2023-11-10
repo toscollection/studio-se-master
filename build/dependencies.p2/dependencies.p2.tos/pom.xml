@@ -30,16 +30,11 @@
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <url>https://oss.sonatype.org/content/repositgmaven-pluginories/snapshots/</url>
         </repository>
     </repositories>
 
 		<dependencies>
-			<dependency>
-			<groupId>biz.aQute.bnd</groupId>
-			<artifactId>biz.aQute.bndlib</artifactId>
-			<version>5.2.0</version>
-		</dependency>
 		<dependency>
 			<groupId>org.ops4j.pax.url</groupId>
 			<artifactId>pax-url-aether</artifactId>
@@ -114,12 +109,6 @@
 			<artifactId>json-io</artifactId>
 			<version>4.14.0-TALEND</version>
 		</dependency>
-
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.12.0</version>
-        </dependency>
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
 			<artifactId>jaxb-api</artifactId>
@@ -129,11 +118,6 @@
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
             <version>1.9.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.7</version>
         </dependency>
         <!-- end of daikon dependencies -->
 
@@ -301,11 +285,6 @@
 			<version>1.2</version>
 		</dependency>
 		<dependency>
-			<groupId>commons-beanutils</groupId>
-			<artifactId>commons-beanutils</artifactId>
-			<version>1.9.4</version>
-		</dependency>
-		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>org-slf4j-api</artifactId>
 			<version>1.7.2</version>
@@ -342,23 +321,11 @@
             <classifier>bundle</classifier>
         </dependency>
         <dependency>
-            <groupId>org.bouncycastle</groupId>
-            <artifactId>bcprov</artifactId>
-            <version>1.70.0</version>
-            <classifier>bundle</classifier>
-        </dependency>
-        <dependency>
-            <groupId>org.junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-	    <classifier>bundle</classifier>
-        </dependency>
-        <dependency>
             <groupId>ch.qos.reload4j</groupId>
             <artifactId>reload4j</artifactId>
-            <version>1.2.22-TALEND</version>
+            <version>1.2.24-TALEND</version>
         </dependency>
-		<dependency>
+        		<dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>${fasterxml.jackson.version}</version>
@@ -372,6 +339,12 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${fasterxml.jackson.databind.version}</version>
+        </dependency>
+		<!-- removed org.talend.libraries.guava so added here for org.talend.dataquality.semantic  -->
+        <dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>32.0.1-jre</version>
         </dependency>
 	</dependencies>
 

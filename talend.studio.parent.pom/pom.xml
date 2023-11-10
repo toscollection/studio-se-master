@@ -21,7 +21,7 @@
         <org.talend.daikon.crypto-utils.version>7.1.16</org.talend.daikon.crypto-utils.version>
         <studio-utils.version>1.0.13</studio-utils.version>
         <compcache.creator.version>1.0.0</compcache.creator.version>
-        <tycho.version>1.7.0</tycho.version>
+        <tycho.version>4.0.0</tycho.version>
         <tycho-extras.version>${tycho.version}</tycho-extras.version>
         <base.version>8.8.8</base.version>
         <!-- osgi.compatible.version is either ${base.version}-SNAPSHOT (snapshots), ${base.version}.<suffix> (milestones), or ${base.version} (GA)-->
@@ -46,6 +46,7 @@
         <osgi.os>win32</osgi.os>
         <osgi.arch>x86_64</osgi.arch>
         <strictVersions>true</strictVersions>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <distributionManagement>
@@ -67,8 +68,6 @@
         <repository>
             <id>tos-deps</id>
             <url>${tos-deps-p2-repo.url}</url>
-            <!-- setup normally with ${tos-deps-p2-repo.url}, changed for local testing only -->
-            <!--<url>file:///D:/Work/eclipse_upgrade/target_platform/target741/p2-tos</url>-->
             <layout>p2</layout>
         </repository>
         <repository>
@@ -144,7 +143,8 @@
                 <artifactId>target-platform-configuration</artifactId>
                 <version>${tycho.version}</version>
                 <configuration>
-                    <executionEnvironmentDefault>JavaSE-1.8</executionEnvironmentDefault>
+				    <pomDependencies>ignore</pomDependencies>
+                    <executionEnvironmentDefault>JavaSE-17</executionEnvironmentDefault>
                     <environments>
                         <environment>
                             <os>${osgi.os}</os>
@@ -194,14 +194,15 @@
                 <artifactId>tycho-compiler-plugin</artifactId>
                 <version>${tycho.version}</version>
                 <configuration>
+                    <pomOnlyDependencies>ignore</pomOnlyDependencies>
 	            <compilerArgs>
-			<arg>-err:+discouraged,forbidden</arg>
-			<arg>-warn:+discouraged,forbidden</arg>
-		    </compilerArgs>
-                    <compilerVersion>1.8</compilerVersion>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <useProjectSettings>false</useProjectSettings>
+                    <arg>-err:+discouraged,forbidden</arg>
+                    <arg>-warn:+discouraged,forbidden</arg>
+    		    </compilerArgs>
+                <compilerVersion>17</compilerVersion>
+                <source>17</source>
+                <target>17</target>
+                <useProjectSettings>false</useProjectSettings>
                 </configuration>
             </plugin>
             <plugin>
@@ -227,23 +228,23 @@
 					<missing>${user.dir}/skip.eclipse.p2.properties</missing>
 				</file>
 			</activation>
-    		<repositories>
-				<repository>
-                    <id>eclipse_repo</id>
-                    <url>${eclipse-repo.url}</url>
+            <repositories>
+                <repository>
+                    <id>fullp2</id>
+                    <url>file:///Users/hzhao/talend/local_build/target_platform/testTargetEclipse428</url>
                     <layout>p2</layout>
- 				</repository>
+                </repository>
                 <repository>
                     <id>babel_repo</id>
-                    <url>${babel-repo.url}</url>
+                    <url>https://download.eclipse.org/technology/babel/update-site/latest/</url>
                     <layout>p2</layout>
                 </repository>
                 <repository>
                     <id>swtbot</id>
-                    <url>https://download.eclipse.org/technology/swtbot/releases/3.1.0/</url>
+                    <url>https://download.eclipse.org/technology/swtbot/releases/4.1.0/</url>
                     <layout>p2</layout>
-                </repository>
-			</repositories>
+                </repository> 
+            </repositories>
 		</profile>
         <profile>
             <id>nonofficial</id>
@@ -278,7 +279,7 @@
                         <version>${tycho.version}</version>
                         <dependencies>
                             <dependency>
-                                <groupId>org.eclipse.tycho.extras</groupId>
+                                <groupId>org.eclipse.tycho</groupId>
                                 <artifactId>tycho-buildtimestamp-jgit</artifactId>
                                 <version>${tycho.version}</version>
                             </dependency>
@@ -371,7 +372,7 @@
                         <version>${tycho.version}</version>
                         <dependencies>
                             <dependency>
-                                <groupId>org.eclipse.tycho.extras</groupId>
+                                <groupId>org.eclipse.tycho</groupId>
                                 <artifactId>tycho-buildtimestamp-jgit</artifactId>
                                 <version>${tycho.version}</version>
                             </dependency>
@@ -428,7 +429,7 @@
                         <version>${tycho.version}</version>
                         <dependencies>
                             <dependency>
-                                <groupId>org.eclipse.tycho.extras</groupId>
+                                <groupId>org.eclipse.tycho</groupId>
                                 <artifactId>tycho-buildtimestamp-jgit</artifactId>
                                 <version>${tycho.version}</version>
                             </dependency>
@@ -495,7 +496,7 @@
                         <version>${tycho.version}</version>
                         <dependencies>
                             <dependency>
-                                <groupId>org.eclipse.tycho.extras</groupId>
+                                <groupId>org.eclipse.tycho</groupId>
                                 <artifactId>tycho-buildtimestamp-jgit</artifactId>
                                 <version>${tycho-extras.version}</version>
                             </dependency>
