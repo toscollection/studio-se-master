@@ -231,7 +231,7 @@
             <repositories>
                 <repository>
                     <id>fullp2</id>
-                    <url>file:///Users/hzhao/talend/local_build/target_platform/testTargetEclipse428</url>
+                    <url>https://artifacts-oss.talend.com/nexus/content/unzip/TalendP2UnzipOpenSourceRelease/org/talend/repo/eclipse-p2-repo/4.28/eclipse-p2-repo-4.28.zip-unzip/</url>
                     <layout>p2</layout>
                 </repository>
                 <repository>
