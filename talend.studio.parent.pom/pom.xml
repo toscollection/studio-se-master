@@ -21,7 +21,7 @@
         <org.talend.daikon.crypto-utils.version>7.1.16</org.talend.daikon.crypto-utils.version>
         <studio-utils.version>1.0.13</studio-utils.version>
         <compcache.creator.version>1.0.0</compcache.creator.version>
-        <tycho.version>4.0.0</tycho.version>
+        <tycho.version>4.0.4</tycho.version>
         <tycho-extras.version>${tycho.version}</tycho-extras.version>
         <base.version>8.8.8</base.version>
         <!-- osgi.compatible.version is either ${base.version}-SNAPSHOT (snapshots), ${base.version}.<suffix> (milestones), or ${base.version} (GA)-->
