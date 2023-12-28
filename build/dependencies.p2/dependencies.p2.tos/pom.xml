@@ -13,7 +13,7 @@
 	<properties>
             <components.version>0.38.0-SNAPSHOT</components.version>
             <daikon.version>7.1.16</daikon.version>
-            <studio-utils.version>1.0.15</studio-utils.version>
+            <studio-utils.version>1.0.16</studio-utils.version>
         </properties>
 
     <repositories>
