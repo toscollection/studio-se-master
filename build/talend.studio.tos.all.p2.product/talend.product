@@ -53,7 +53,6 @@
       <feature id="org.talend.dataquality.se.test.feature"/>
       <feature id="org.talend.studio.components.bd.couchbase.feature"/>
       <feature id="org.talend.studio.components.bd.cosmosdb.feature"/>
-      <feature id="org.talend.studio.components.tcompv0.jdbc.feature"/>
       <feature id="org.talend.studio.components.tcompv0.couchbase.feature"/>
       <feature id="org.talend.studio.components.tcompv0.netsuite.feature"/>
       <feature id="org.talend.studio.components.tcompv0.marklogic.feature"/>

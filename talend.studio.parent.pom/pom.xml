@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-    <groupId>org.talend.studio</groupId>
+    <parent>
+        <groupId>org.talend.studio</groupId>
+        <artifactId>studio-deps-bom</artifactId>
+        <version>8.8.8-SNAPSHOT</version>
+        <relativePath>../studio-deps-bom/</relativePath>
+    </parent>
     <artifactId>parent-pom</artifactId>
-    <version>8.8.8-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <component-runtime.version>1.63.0-SNAPSHOT</component-runtime.version>
-        <components.version>0.38.0-SNAPSHOT</components.version>
-        <tacokit.components.version>1.53.0-SNAPSHOT</tacokit.components.version>
-        <m2.fasterxml.jackson.version>2.14.3</m2.fasterxml.jackson.version>
-        <m2.fasterxml.jackson.databind.version>2.14.3</m2.fasterxml.jackson.databind.version>
-        <jackson-codehaus.version>1.9.16-TALEND</jackson-codehaus.version>
-        <daikon.version>7.1.16</daikon.version>
-        <slf4j-api.version>1.7.34</slf4j-api.version>
-        <daikon-ee.format.verison>3.2.0</daikon-ee.format.verison>
-        <daikon.audit.version>1.16.1</daikon.audit.version>
-        <org.talend.daikon.crypto-utils.version>7.1.16</org.talend.daikon.crypto-utils.version>
-        <studio-utils.version>1.0.14</studio-utils.version>
         <compcache.creator.version>1.0.0</compcache.creator.version>
-        <tycho.version>4.0.4</tycho.version>
         <tycho-extras.version>${tycho.version}</tycho-extras.version>
         <base.version>8.8.8</base.version>
         <!-- osgi.compatible.version is either ${base.version}-SNAPSHOT (snapshots), ${base.version}.<suffix> (milestones), or ${base.version} (GA)-->
@@ -33,75 +24,111 @@
         <talend.nexus.host>https://artifacts-oss.talend.com</talend.nexus.host>
         <talend.nexus.url>${talend.nexus.host}/nexus/content/repositories</talend.nexus.url>
         <talend.nexus.p2unzip.url>${talend.nexus.host}/nexus/content/unzip</talend.nexus.p2unzip.url>
-        <opensourcesnapshot-unziprepo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSourceSnapshot/org/talend/repo</opensourcesnapshot-unziprepo.url>
-        <opensourcerelease-unziprepo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSourceRelease/org/talend/repo</opensourcerelease-unziprepo.url>
-        <eclipse-repo.url>${opensourcerelease-unziprepo.url}/eclipse-p2-repo/4.20/eclipse-p2-repo-4.20.zip-unzip/</eclipse-repo.url>
-        <babel-repo.url>${opensourcerelease-unziprepo.url}/babel-r2021-06/0.19.0/babel-r2021-06-0.19.0.zip-unzip/</babel-repo.url>
-        <opensourcesnapshot-repo.url>${talend.nexus.url}/TalendOpenSourceSnapshot</opensourcesnapshot-repo.url>
-        <opensourcerelease-repo.url>${talend.nexus.url}/TalendOpenSourceRelease</opensourcerelease-repo.url>
-        <tos-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/studio/talend-tos-p2-repo/${osgi.compatible.version}/talend-tos-p2-repo-${osgi.compatible.version}.zip-unzip/</tos-p2-repo.url>
         <tos-deps-p2-repo.url>${talend.nexus.p2unzip.url}/TalendP2UnzipOpenSource${repo.type}/org/talend/repo/dependencies.p2.tos/${maven.compatible.version}/dependencies.p2.tos-${maven.compatible.version}.zip-unzip/</tos-deps-p2-repo.url>
         <jgit.dirtyWorkingTree.official>error</jgit.dirtyWorkingTree.official>
         <osgi.ws>win32</osgi.ws>
         <osgi.os>win32</osgi.os>
         <osgi.arch>x86_64</osgi.arch>
         <strictVersions>true</strictVersions>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <distributionManagement>
         <snapshotRepository>
             <id>talend_nexus_deployment</id>
-            <url>${opensourcesnapshot-repo.url}</url>
+            <url>https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceSnapshot</url>
             <snapshots><enabled>true</enabled></snapshots>
             <releases><enabled>false</enabled></releases>
         </snapshotRepository>
         <repository>
             <id>talend_nexus_deployment</id>
-            <url>${opensourcerelease-repo.url}</url>
+            <url>https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease</url>
             <snapshots><enabled>false</enabled></snapshots>
             <releases><enabled>true</enabled></releases>
         </repository>
     </distributionManagement>
-
     <repositories>
         <repository>
             <id>tos-deps</id>
             <url>${tos-deps-p2-repo.url}</url>
             <layout>p2</layout>
         </repository>
+		<repository>
+			<id>releases</id>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<url>https://artifacts-zl.talend.com/nexus/content/repositories/releases/</url>
+		</repository>
+		<repository>
+			<id>snapshots</id>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<url>https://artifacts-zl.talend.com/nexus/content/repositories/snapshots/</url>
+		</repository>
+		<repository>
+			<id>talend_open</id>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<url>https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease</url>
+		</repository>
+		<repository>
+			<id>talend_open_snapshots</id>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<url>https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceSnapshot</url>
+		</repository>
         <repository>
-            <id>talend_open</id>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <url>${opensourcerelease-repo.url}</url>
-        </repository>
-        <repository>
-            <id>talend_open_snapshots</id>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <url>${opensourcesnapshot-repo.url}</url>
+            <id>eclipse</id>
+            <url>https://download.eclipse.org/releases/2023-06/</url>
+            <layout>p2</layout>
         </repository>
     </repositories>
 
 	<pluginRepositories>
 		<pluginRepository>
-			<id>talend-openplugins-snapshot</id>
-			<name>talend-openplugins-snapshot</name>
-			<url>${opensourcesnapshot-repo.url}</url>
+			<id>releases</id>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<url>https://artifacts-zl.talend.com/nexus/content/repositories/releases/</url>
 		</pluginRepository>
 		<pluginRepository>
-			<id>talend-openplugins-release</id>
-			<name>talend-openplugins-release</name>
-			<url>${opensourcerelease-repo.url}</url>
+			<id>snapshots</id>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<url>https://artifacts-zl.talend.com/nexus/content/repositories/snapshots/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>talend_open</id>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<url>https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease</url>
 		</pluginRepository>
 	</pluginRepositories>
 
@@ -143,6 +170,13 @@
                 <artifactId>target-platform-configuration</artifactId>
                 <version>${tycho.version}</version>
                 <configuration>
+                    <target>
+                        <artifact>
+                            <groupId>org.talend.studio</groupId>
+                            <artifactId>target-platform</artifactId>
+                            <version>${osgi.compatible.version}</version>
+                        </artifact>
+                    </target>
 				    <pomDependencies>ignore</pomDependencies>
                     <executionEnvironmentDefault>JavaSE-17</executionEnvironmentDefault>
                     <environments>
@@ -153,39 +187,18 @@
                         </environment>
                     </environments>
                     <filters>
-                        <!-- restrict version of a bundle -->
-                        <!--<filter>
-							<type>eclipse-plugin</type>
-							<id>org.eclipse.ui.views.properties.tabbed</id>
-							<restrictTo>
-								<version>3.6.100.v20140519-0906</version>
-							</restrictTo>
-						</filter>-->
-                        <!-- <filter>
+                        <filter>
                             <type>eclipse-plugin</type>
-                            <id>org.eclipse.jdt.core</id>
+                            <id>org.apache.log4j</id>
                             <restrictTo>
-                                <version>3.26.0.v20210609-0549</version>
+                                <version>1.2.24.TALEND</version>
                             </restrictTo>
-                        </filter> -->
-
-                        <!-- example 2: remove all providers of the package javax.persistence except the bundle javax.persistence
-				 <filter>
-					<type>java-package</type>
-					<id>javax.persistence</id>
-					<restrictTo>
-					   <type>eclipse-plugin</type>
-					   <id>javax.persistence</id>
-					</restrictTo>
-				 </filter>
--->
-                        <!-- example 3: work around Equinox bug 348045
-				 <filter>
-					<type>p2-installable-unit</type>
-					<id>org.eclipse.equinox.servletbridge.extensionbundle</id>
-					<removeAll />
-				 </filter>
--->
+                        </filter>
+                        <filter>
+                            <type>p2-installable-unit</type>
+                            <id>slf4j.nop</id>
+                            <removeAll />
+                        </filter>
                     </filters>
                 </configuration>
             </plugin>
@@ -221,26 +234,6 @@
         </plugins>
     </build>
     <profiles>
-		<profile>
-			<id>add.base.p2</id>
-			<activation>
-				<file>
-					<missing>${user.dir}/skip.eclipse.p2.properties</missing>
-				</file>
-			</activation>
-            <repositories>
-                <repository>
-                    <id>fullp2</id>
-                    <url>https://artifacts-oss.talend.com/nexus/content/unzip/TalendP2UnzipOpenSourceRelease/org/talend/repo/eclipse-p2-repo/4.28/eclipse-p2-repo-4.28.zip-unzip/</url>
-                    <layout>p2</layout>
-                </repository>
-                <repository>
-                    <id>swtbot</id>
-                    <url>https://download.eclipse.org/technology/swtbot/releases/4.1.0/</url>
-                    <layout>p2</layout>
-                </repository>
-            </repositories>
-		</profile>
         <profile>
             <id>nonofficial</id>
             <activation>
@@ -453,23 +446,11 @@
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <product.version>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</product.version>
                 <timestamp>${maven.build.timestamp}</timestamp>
                 <maven.build.timestamp.format>yyyyMMdd'_'HHmm</maven.build.timestamp.format>
                 <tycho.buildtimestamp.format>${maven.build.timestamp.format}</tycho.buildtimestamp.format>
+                <product.version>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</product.version>
             </properties>
-            <repositories>
-                <repository>
-                    <id>fullp2</id>
-                    <url>${fullp2_url}</url>
-                    <layout>p2</layout>
-                </repository>
-                <repository>
-                    <id>eclipse_repo</id>
-                    <url>${eclipse-repo.url}</url>
-                    <layout>p2</layout>
-                </repository>
-            </repositories>
             <build>
                 <plugins>
                     <plugin>
