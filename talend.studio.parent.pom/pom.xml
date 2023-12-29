@@ -9,7 +9,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <daikon.version>0.31.12</daikon.version>
-        <components.version>0.36.32</components.version>
+        <components.version>0.36.33</components.version>
         <daikon-ee.format.verison>3.2.0</daikon-ee.format.verison>
         <daikon.audit.version>1.16.1</daikon.audit.version>
         <org.talend.daikon.crypto-utils.version>0.31.12</org.talend.daikon.crypto-utils.version>
