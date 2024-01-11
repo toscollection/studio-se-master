@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.talend.studio</groupId>
         <artifactId>studio-deps-bom</artifactId>
-        <version>8.8.8-SNAPSHOT</version>
+        <version>8.0.2-SNAPSHOT</version>
         <relativePath>../studio-deps-bom/</relativePath>
     </parent>
     <artifactId>parent-pom</artifactId>
@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <compcache.creator.version>1.0.0</compcache.creator.version>
         <tycho-extras.version>${tycho.version}</tycho-extras.version>
-        <base.version>8.8.8</base.version>
+        <base.version>8.0.2</base.version>
         <!-- osgi.compatible.version is either ${base.version}-SNAPSHOT (snapshots), ${base.version}.<suffix> (milestones), or ${base.version} (GA)-->
         <osgi.compatible.version>${base.version}-SNAPSHOT</osgi.compatible.version>
         <!-- maven.compatible.version is either ${base.version}-SNAPSHOT (snapshots), ${base.version}-<suffix> (milestones), or ${base.version} (GA)-->
