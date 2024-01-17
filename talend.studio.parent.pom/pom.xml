@@ -94,7 +94,7 @@
 		</repository>
         <repository>
             <id>eclipse</id>
-            <url>https://download.eclipse.org/releases/2023-06/</url>
+            <url>https://download.eclipse.org/releases/2023-12</url>
             <layout>p2</layout>
         </repository>
     </repositories>
@@ -192,13 +192,13 @@
                             <id>org.apache.log4j</id>
                             <restrictTo>
                                 <version>1.2.24.TALEND</version>
-                            </restrictTo>
-                        </filter>
-                        <filter>
-                            <type>p2-installable-unit</type>
-                            <id>slf4j.nop</id>
-                            <removeAll />
-                        </filter>
+							</restrictTo>
+						</filter>
+						<filter>
+							<type>p2-installable-unit</type>
+							<id>org.eclipse.orbit.xml-apis-ext</id>
+							<removeAll />
+						</filter>
                     </filters>
                 </configuration>
             </plugin>

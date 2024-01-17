@@ -119,11 +119,6 @@
 			<artifactId>jaxb-api</artifactId>
 			<version>2.3.1</version>
 		</dependency>
-		<dependency>
-            <groupId>commons-beanutils</groupId>
-            <artifactId>commons-beanutils</artifactId>
-            <version>1.9.4</version>
-        </dependency>
         <!-- end of daikon dependencies -->
 
 		<!-- ========================= -->
@@ -160,11 +155,6 @@
 			<groupId>com.thoughtworks.paranamer</groupId>
 			<artifactId>paranamer</artifactId>
 			<version>2.8</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-compress</artifactId>
-			<version>1.23.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.livesense</groupId>
@@ -272,11 +262,6 @@
 			<version>${components.version}</version>
 			<classifier>bundle</classifier>
 		</dependency>
-		<dependency>
-			<groupId>commons-codec</groupId>
-			<artifactId>commons-codec</artifactId>
-			<version>1.14</version>
-		</dependency>
 		<!-- to avoid updatin the complete eclipse target platform we add these
 			single dependencies -->
         <dependency>
@@ -290,11 +275,6 @@
 			<version>1.2</version>
 		</dependency>
 		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>org-slf4j-api</artifactId>
-			<version>1.7.2</version>
-		</dependency>
-		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-configuration2</artifactId>
 			<version>2.9.0</version>
@@ -304,11 +284,6 @@
             <artifactId>commons-text</artifactId>
             <version>1.10.0</version>
         </dependency>
-		<dependency>
-			<groupId>org.yaml</groupId>
-			<artifactId>snakeyaml</artifactId>
-			<version>2.2</version>
-		</dependency>
 		<dependency>
 			<groupId>org.codehaus.woodstox</groupId>
 			<artifactId>stax2-api</artifactId>
@@ -329,27 +304,6 @@
             <groupId>ch.qos.reload4j</groupId>
             <artifactId>reload4j</artifactId>
             <version>1.2.24-TALEND</version>
-        </dependency>
-        		<dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <version>${fasterxml.jackson.version}</version>
-        </dependency>
-		<dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>${fasterxml.jackson.version}</version>
-        </dependency>
-		<dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>${fasterxml.jackson.databind.version}</version>
-        </dependency>
-		<!-- removed org.talend.libraries.guava so added here for org.talend.dataquality.semantic  -->
-        <dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>32.0.1-jre</version>
         </dependency>
 	</dependencies>
 
